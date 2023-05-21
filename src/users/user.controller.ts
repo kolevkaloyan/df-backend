@@ -20,13 +20,15 @@ export class UserController {
     async addUser (
         @Body('fullName') fullName: string,
         @Body('email') email: string,
+        @Body('password') password: string,
 
         
     ) {
         return this.userService.addUser(
             {
                 fullName,
-                email
+                email,
+                password
             }
         )
     }
